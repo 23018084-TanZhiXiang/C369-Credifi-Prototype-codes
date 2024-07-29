@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credifi - Financial Tracking Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="credifi-logo.png">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <img src="credifi-logo.png" alt="Credifi Logo" style="width: 1.25rem; height: 1.25rem;">
+          </div>
+          <ul class="nav-links">
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#platforms">Platforms</a>
+            </li>
+            <li>
+              <a href="#how-it-works">How it works</a>
+            </li>
+            <li>
+              <a href="#features">Features</a>
+            </li>
+          </ul>
+          <div style="display: flex; align-items: center;">
+            <div class="search-container">
+              <img src="search-icon.png">
+              <input type="text" id="search-input">
+            </div>
+            <img src="language-icon.png" style="margin-left: 15px; width: 15px; height: 15px;">
+          </div>
+        </nav>
+      </div>
+    </header>
+    <hr class="nav-separator">
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <h1 style="font-size: 16px; margin: 0px; color: black;">Financial Tracking Platform</h1>
+            <p style="font-size: 71px; font-weight: bold; margin: 0px; color: black;">CREDIFI</p>
+            <hr class="homepage-mini-separator">
+            <div class="homepage-description-container">
+              <p>Enables <b>YOU</b> to improve your financial health and obtain cheap credit with our individualized credit advice tools and creative debt management <br />strategies. <br /> Take control of your finances <b>TODAY</b> with our cutting-edge financial <br />tracking platform, empowering you to manage your money, track expenses, <br />and achieve your financial goals like never before. </p>
+            </div>
+            <button id="join-us-button" onclick="scrollToSection('features')">Join Us</button>
+            <button id="trial-now-button" onclick="scrollToSection('pricing')">Trial Now</button>
+          </div>
+          <div class="hero-image">
+            <img src="Credifi.png" alt="Financial Tracking">
+          </div>
+        </div>
+      </section>
+      <hr class="thematic-separator">
+      <section id="features" class="features">
+        <div class="container">
+          <h2 style="text-align: center; color: white; font-weight: bold; margin-bottom: 10px;">Reasons to choose Credifi</h2>
+          <br />
+          <div class="row row-cols-3 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card feature-card">
+                <div class="card-body">
+                  <div class="feature-numberer">
+                    <p>Feature #1</p>
+                  </div>
+                  <h5 class="card-title feature-property-title">Reliable</h5>
+				  <br />
+				  <div class="feature-card-texts">
+					  <p class="card-text">Tailored loan alternatives and credit advices</p>
+					  <p class="card-text">Free tools for financial teachings and credit score monitoring while spending</p>
+					  <p class="card-text">
+						<b>99.9% uptime</b> for banking services, excluding scheduled maintenance hours
+					  </p>
+			      </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card feature-card">
+                <div class="card-body">
+                  <div class="feature-numberer">
+                    <p>Feature #2</p>
+                  </div>
+                  <h5 class="card-title feature-property-title">Secure</h5>
+				  <br />
+				  <div class="feature-card-texts">
+					  <p class="card-text">Fraud detection driven by AI for safe transactions, lowering chances of monetary loss</p>
+					  <p class="card-text">Users are notified immediately of potential fraud, allowing swift action to stop transactions</p>
+					  <p class="card-text">Evolving AI systems help boost the detection capabilities of banking transactions</p>
+				  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card feature-card">
+                <div class="card-body">
+				  <div class="feature-numberer">
+				  	<p>Feature #3</p>
+				  </div>
+                  <h5 class="card-title feature-property-title">Simple & Transparent</h5>
+				  <br />
+				  <div class="feature-card-texts">
+					  <p class="card-text">Cutting-edge financial tracking platform, empowering you to manage your money, track expenses, and achieve your financial goals like never before.</p>
+					  <p class="card-text">No sign-up fees! Only applicable when you opt for a premium tailored loan package in Pricing</p>
+                  </div>
+				</div>
+              </div>
+            </div>
+			<div class="col">
+			  <div class="signup-button-container">
+				<button class="big-button"><p>Sign up</p></button>
+				<div class="icon-container">
+					<img src="right-arrow.png" alt="Signup Button">
+				</div>
+   	          </div>
+			</div>
+          </div>
+		</div>
+      </section>
+	  <hr class="thematic-separator">
+		<section id="pricing" class="pricing">
+		  <div class="container">
+			<h2 style="text-align: center; color: white; font-weight: bold; margin-bottom: 10px;">Pricing</h2>
+			<br />
+			<div class="row row-cols-3 row-cols-md-3 g-3">
+			  <div class="col">
+				<div class="card" style="height: 510px;">
+				  <div class="card-body" style="position: relative !important;">
+					<h5 class="card-title pricing-property-title">Starter</h5>
+					<p class="pricing-property-price">FREE</p>
+					<p class="card-text tier-feature-crumb">forever for individuals and teams of up to 3</p>
+					<hr class="pricing-separator">
+					<ul>
+					  <li>Track your buy now, pay later activities with insights on your financial responsibility</li>
+					  <li>Free tools for financial teachings and credit score monitoring while spending</li>
+					  <li>E-Wallet that allows you to store, send your money</li>
+					  <li>Advanced Security (2FA, biometric, etc.)</li>
+					</ul>
+					<div class="button-container" onclick="startForFree()">
+					  <button class="big-button">Start for free</button>
+					  <div class="icon-container">
+						<img src="right-arrow.png" alt="Get Free Plan">
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col">
+				<div class="card" style="height: 510px;">
+				  <div class="card-body" style="position: relative !important;">
+					<h5 class="card-title pricing-property-title">Unlimited</h5>
+					<p class="pricing-property-price">$29</p>
+					<p class="pricing-property-price" style="font-size: 25px !important; display: inline;">per user / month</p>
+					<p class="card-text tier-feature-crumb">if billed yearly, $39 if billed monthly</p>
+					<hr class="pricing-separator">
+					<p class="card-text" style="margin-left: 11px;">Everything in Free, plus...</p>
+					<ul>
+					  <li>Receive individualised financial advice, monitor the success of portfolio, and link investment accounts</li>
+					  <li>Priority support on all banking services</li>
+					  <li>Smart Notifications</li>
+					</ul>
+					<div class="button-container" onclick="getUnlimited()">
+					  <button class="big-button">Get Unlimited</button>
+					  <div class="icon-container">
+						<img src="right-arrow.png" alt="Get Unlimited Plan">
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col">
+				<div class="card" style="height: 520px;">
+				  <div class="card-body" style="position: relative !important;">
+					<h5 class="card-title pricing-property-title">Enterprise</h5>
+					<p class="pricing-property-price">$35</p>
+					<p class="pricing-property-price" style="font-size: 25px !important; display: inline;">per user / month</p>
+					<p class="card-text tier-feature-crumb">if billed yearly, $45 if billed monthly</p>
+					<hr class="pricing-separator">
+					<p class="card-text" style="margin-left: 11px;">Everything in Unlimited, plus...</p>
+					<ul>
+					  <li>Investment/Credit portfolio rebalancing, and tax optimisation</li>
+					  <li>Advanced analytics, with a dedicated account manager for large enterprises and organisations</li>
+					  <li>Complete financial planning based on each person's objectives and risk tolerance</li>
+					</ul>
+					<div class="button-container" onclick="getEnterprise()">
+					  <button class="big-button">Get Enterprise</button>
+					  <div class="icon-container">
+						<img src="right-arrow.png" alt="Get Enterprise Plan">
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Credifi. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>

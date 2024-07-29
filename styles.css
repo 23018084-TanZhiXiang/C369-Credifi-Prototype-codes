@@ -1,0 +1,364 @@
+/* General Styles */
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #EFEFEF;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+#features, #pricing {
+	background-color: #13072e;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* THIS IS THE CODE THAT GIVES ALL YOUR IMAGES A "CURSOR", MAKING THEM LOOK CLICKABLE BUT ACTUALLY THEY DO NOTHING. */
+/* SIMILARLY, SEARCH FOR ALL THE PLACES HERE THAT HAVE THE "CURSOR: POINTER". THIS MAKES THE ELEMENT LOOK CLICKABLE WHEN ITS NOT. */
+img {
+	cursor: pointer;
+}
+
+header {
+    background-color: #EFEFEF;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+hr.nav-separator {
+	margin-top: -0.75%;
+	background-color: #2e2e2e;
+	width: 100%;
+	height: 0.5px;
+	border: none;
+}
+
+hr.thematic-separator {
+	background-color: #2e2e2e;
+	width: 100%;
+	height: 0.5px;
+	border: none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+hr.homepage-mini-separator {
+	background-color: #2e2e2e;
+	margin-top: 50px;
+	border-radius: 50px;
+	width: 50px;
+	height: 5px;
+	border: none;
+}
+
+hr.pricing-separator {
+	height: 5px;
+	background-color: #FFF;
+	width: 95%;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+ul {
+	list-style-type: "✔ ";
+}
+
+li {
+	color: #EFEFEF;
+}
+
+.search-container {
+	display: flex;
+	align-items: center;
+	background-color: gray;
+	border-radius: 15px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.search-container img {
+	width: 15px;
+	height: 15px;
+	margin-right: 10px;
+}
+
+#search-input {
+	border: none;
+	outline: none;
+	width: 100%;
+	font-size: 12px;
+	background-color: transparent;
+	color: white;
+}
+
+.nav-links {
+    list-style: none;
+	display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #000;
+	text-transform: uppercase;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    background: #EFEFEF;
+}
+
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    flex: 1;
+    padding: 20px;
+	color: black;
+}
+
+.homepage-description-container {
+	width: 590px;
+	height: 160px;
+	background: linear-gradient(90deg, #b8b8b8, #f1f1f1);
+	border-radius: 15px;
+}
+
+.homepage-description-container p {
+	font-family: 'DM Sans';
+	margin: 10px;
+	padding: 5px;
+	padding-top: 10px;
+	font-size: 15px;
+}
+
+.hero-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.feature-numberer {
+	border-radius: 25px;
+	border: none;
+	background-color: #b3aaff;
+	max-width: 30%;
+	margin-top: -2%;
+	margin-bottom: 10px;
+	width: 30%;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	background: linear-gradient(135deg, #13072e, #3f2182) !important;
+	border-radius: 50px;
+}
+
+.feature-card {
+	height: 450px !important;
+	max-height: 450px !important;
+	opacity: 0;
+	transition: opacity 1s ease-in;
+}
+
+.feature-card.visible {
+	opacity: 1 !important;
+}
+
+.card-text {
+	color: white;
+}
+
+.feature-numberer p {
+	color: #13072e;
+	font-size: 14px;
+	margin: 0 auto;
+}
+
+.feature-property-title {
+	font-size: 25px !important;
+	color: white !important;
+	font-family: 'DM Sans' !important;
+	font-weight: 900 !important;
+}
+
+.pricing-property-title {
+	font-size: 30px !important;
+	color: white !important;
+	padding: 15px;
+	padding-bottom: 0px !important;
+	font-family: 'DM Sans' !important;
+	font-weight: 900 !important;
+}
+
+.pricing-property-price {
+	display: inline;
+	font-size: 55px !important;
+	color: white !important;	
+	padding-left: 15px;
+	margin-bottom: 0px;
+	font-family: 'DM Sans' !important;
+	font-weight: 900 !important;
+}
+
+.tier-feature-crumb {
+	font-size: 15px !important;
+	padding-left: 15px;
+	margin-top: 0px;
+	
+}
+
+.signup-button-container {
+	display: flex;
+    align-items: center;
+	width: 160px;
+    height: 40px;
+	margin-left: 5%;
+}
+
+.button-container {
+	position: absolute;
+	bottom: 10px;
+    display: flex;
+    align-items: center;
+	width: 160px;
+    height: 40px;
+	margin-left: 5%;
+}
+
+.big-button {
+	z-index: 500;
+    width: 100%; 
+    height: 100%;
+    background-color: white;
+    border-radius: 50px;
+    color: #13072e;
+    border: none;
+	display: flex;
+	padding: 10px;
+	justify-content: left;
+	align-items: center;
+}
+.big-button p {
+	width: 70% !important;
+	text-align: center;
+	margin: 0;
+}
+.icon-container {
+	z-index: 501;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: #13072e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -25%;
+}
+.icon-container img {
+    width: 20px; 
+    height: 20px;
+	margin: 0 auto;
+ }
+
+.features,
+.pricing {
+    padding: 50px 0;
+}
+
+.features .feature-item,
+.pricing .pricing-plan {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.features .feature-item h3,
+.pricing .pricing-plan h3 {
+    color: #00ff00;
+}
+
+#join-us-button {
+	font-family: 'DM Sans';
+	margin-top: 40px;
+	border-radius: 30px;
+	padding: 6px;
+	background-color: #2e2e2e;
+	border: 1px solid #2e2e2e;
+	width: 140px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20px;
+	color: #feff25;
+	cursor: pointer;
+}
+
+#trial-now-button {
+	font-family: 'DM Sans';
+	margin-top: 40px;
+	border-radius: 30px;
+	padding: 6px;
+	background-color: transparent;
+	border: 1px solid #2e2e2e;
+	width: 140px;
+	text-transform: uppercase;
+	font-size: 20px;
+	color: black;
+	cursor: pointer;
+}
+
+#join-us-button:hover {
+	background-color: #1a1a1a;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .features .feature-item,
+    .pricing .pricing-plan {
+        padding: 10px;
+    }
+}
+
+.hero-text h1, .hero-text h2, .hero-text p {
+    text-align: left;
+  }
