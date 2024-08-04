@@ -1,5 +1,3 @@
-// scripts.js
-
 // Function to scroll to a specific section
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Statistics Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #003d7d;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 600;
+        }
+        .balance {
+            font-size: 32px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #003d7d;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .tab {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .tab:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .active-tab {
+            background-color: #003d7d;
+        }
+        .graph-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .graph-header {
+            border-bottom: 2px solid #003d7d;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .graph-header h2 {
+            margin: 0;
+            color: #003d7d;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .graph {
+            height: 300px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden; /* Ensure the content fits within the container */
+            position: relative; /* Positioning context for the image */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .graph img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: absolute; /* Make sure the image covers the placeholder */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .data-point {
+            font-size: 18px;
+            color: #003d7d;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dollar Wallet</h1>
+        </div>
+        <div class="balance">$149.86</div>
+        <div class="tabs">
+            <div class="tab active-tab">Day</div>
+            <div class="tab">Week</div>
+            <div class="tab">Month</div>
+            <div class="tab">Year</div>
+        </div>
+        <div class="graph-container">
+            <div class="graph-header">
+                <h2>Earnings Overview</h2>
+            </div>
+            <div class="graph">
+                <img src="graph_for_statistic_pg.png" alt="Graph">
+            </div>
+            <div class="data-point">Current: $5.35</div>
+        </div>
+    </div>
+</body>
+</html>

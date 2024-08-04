@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 1rem;
+        }
+        .input-group {
+            margin-bottom: 1rem;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .button {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+        .button:hover {
+            background-color: #c82333;
+        }
+        .message {
+            color: #28a745;
+            margin-top: 0.5rem;
+        }
+        .error {
+            color: #dc3545;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>OTP Verification</h2>
+        <form id="otpForm">
+            <div class="input-group">
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" required>
+                <div id="emailError" class="error"></div>
+            </div>
+            <button type="submit" class="button">Send OTP</button>
+        </form>
+        <div id="otpSection" style="display: none;">
+            <form id="otpVerifyForm">
+                <div class="input-group">
+                    <label for="otp">Enter OTP:</label>
+                    <input type="text" id="otp" name="otp" required>
+                    <div id="otpError" class="error"></div>
+                </div>
+                <button type="submit" class="button">Verify OTP</button>
+            </form>
+            <div id="successMessage" class="message"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('otpForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const emailErrorElement = document.getElementById('emailError');
+            const otpSection = document.getElementById('otpSection');
+
+            // Simple email validation
+            if (email === '') {
+                emailErrorElement.textContent = 'Email cannot be empty';
+            } else if (!email.includes('@')) {
+                emailErrorElement.textContent = 'Invalid email address';
+            } else {
+                emailErrorElement.textContent = '';
+                // Here you would handle sending the OTP
+                alert('OTP has been sent to your email!');
+                otpSection.style.display = 'block'; // Show OTP input section
+            }
+        });
+
+        document.getElementById('otpVerifyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const otp = document.getElementById('otp').value;
+            const otpErrorElement = document.getElementById('otpError');
+            const successMessage = document.getElementById('successMessage');
+
+            // Simple OTP validation like my canva
+            if (otp === '') {
+                otpErrorElement.textContent = 'OTP cannot be empty';
+            } else if (otp.length !== 6) { // Assuming OTP is 6 digits
+                otpErrorElement.textContent = 'OTP must be 6 digits long';
+            } else {
+                otpErrorElement.textContent = '';
+                // Here you would handle verifying the OTP
+                successMessage.textContent = 'OTP verified successfully!';
+                // Redirect to home.html after a short delay
+                setTimeout(() => {
+                    window.location.href = 'home.html';
+                }, 1000); // 1 second delay for user to see the success message
+            }
+        });
+    </script>
+</body>
+</html>
